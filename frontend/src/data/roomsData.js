@@ -1,0 +1,47 @@
+export const roomsData = [
+  { 
+    id: 1,
+    slug: 'bhairavi-heritage-suite',
+    name: 'Bhairavi Heritage Suite', 
+    price: '₹3,499',
+    rating: 4.9,
+    reviews: 124,
+    shortDesc: 'Authentic Kaavi flooring and detailed teak woodwork for a premium spiritual experience.',
+    description: 'Our flagship suite is designed to take you back into the heart of Tamil heritage. With original Red Oxide (Kaavi) flooring and hand-carved teak furniture, every corner tells a story of craftsmanship. Ideal for those seeking deep silence and a grounded atmosphere during their visit to the Isha Yoga Center.', 
+    features: ['King Size Bed', 'Mountain View', 'Private Balcony', 'Hot Shower', '24/7 Power Backup', 'Organic Linen'], 
+    services: ['Traditional Breakfast Included', 'Daily Room Refresh', 'Yoga Mat on Request', 'Filtered Drinking Water'],
+    mainImage: '/premium_room_1.png',
+    gallery: ['/premium_room_1.png', '/bathroom.png', '/dining.png'],
+    tag: 'Best Seller'
+  },
+  { 
+    id: 2,
+    slug: 'shakti-twin-room',
+    name: 'Shakti Twin Room', 
+    price: '₹2,799',
+    rating: 4.8,
+    reviews: 86,
+    shortDesc: 'Spacious twin-bed studio with traditional aesthetics, perfect for friends or family.',
+    description: 'The Shakti Twin Room offers a versatile space with two comfortable beds and a shared vibe of traditional Tamizh culture. With high ceilings and ample natural light, it provides the perfect base for your Velliangiri trek and spiritual sadhana.', 
+    features: ['Twin Beds', 'Work Desk', 'Hill View', 'Free High-speed WiFi', 'Spacious Wardrobe'], 
+    services: ['Breakfast on Request', 'Laundry Service', 'Cab Booking for Isha Center', 'Local Guide Support'],
+    mainImage: '/premium_room_2.png',
+    gallery: ['/premium_room_2.png', '/bathroom.png', '/dining.png'],
+    tag: 'Spacious'
+  },
+  { 
+    id: 3,
+    slug: 'surya-morning-studio',
+    name: 'Surya Morning Studio', 
+    price: '₹2,299',
+    rating: 4.7,
+    reviews: 64,
+    shortDesc: 'Oriented towards the sunrise, this room is perfect for early risers and yoga.',
+    description: 'Surya Studio catches the first rays of the sun, filling your room with life-energy every morning. Simple, clean, and auspicious, it is designed for the modern pilgrim who values simplicity and tradition.', 
+    features: ['Queen Bed', 'Yoga Mat Included', 'Natural Light', 'Quiet Zone'], 
+    services: ['Pure Veg Breakfast', 'Clean Linen every 2 days', 'Peaceful Atmosphere guaranteed'],
+    mainImage: '/room.png',
+    gallery: ['/room.png', '/bathroom.png', '/dining.png'],
+    tag: 'Peaceful'
+  },
+];
