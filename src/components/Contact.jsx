@@ -9,8 +9,12 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('loading');
+    
+    // Check if the VITE_API_BASE_URL is defined, otherwise fallback to local/relative
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
+    
     try {
-      await axios.post('http://localhost:5000/api/book', formData);
+      await axios.post(`${apiBaseUrl}/api/book`, formData);
       setStatus('success');
       setFormData({ name: '', phone: '', message: '' });
     } catch (err) {
