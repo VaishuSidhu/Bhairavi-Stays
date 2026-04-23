@@ -11,7 +11,7 @@ const Contact = () => {
     setStatus('loading');
     
     // Check if the VITE_API_BASE_URL is defined, otherwise fallback to local/relative
-    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || '';
     
     try {
       await axios.post(`${apiBaseUrl}/api/book`, formData);
