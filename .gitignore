@@ -1,25 +1,6 @@
-# Misc
-.DS_Store
-*.log
-.env
-.env.local
-.env.*.local
-
-# Build
-dist/
-dist-ssr/
-*.local
-
-# Dependencies
 node_modules/
-venv/
-env/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# Editor
-.vscode/
-.idea/
-*.sw?
+.env
+dist/
+.DS_Store
+backend/__pycache__/
+backend/.env

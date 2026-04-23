@@ -1,0 +1,12 @@
+{
+  "name": "bhairavi-homestay-api",
+  "version": "1.0.0",
+  "description": "Serverless API for Bhairavi Homestay",
+  "main": "api/rooms.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "mongodb": "^6.5.0"
+  }
+}

@@ -45,13 +45,13 @@ except Exception as e:
 # Mock Initial Rooms if collection is empty
 if rooms_collection.count_documents({}) == 0:
     rooms_collection.insert_many([
-        {"id": 1, "name": "Bhairavi Room", "category": "Classic"},
-        {"id": 2, "name": "Shakti Room", "category": "Premium"},
-        {"id": 3, "name": "Surya Room", "category": "Sun-facing"},
-        {"id": 4, "name": "Chandra Room", "category": "Quiet/Cool"},
-        {"id": 5, "name": "Agni Room", "category": "Traditional"},
-        {"id": 6, "name": "Vayu Room", "category": "Airy"},
-        {"id": 7, "name": "Akasha Room", "category": "Spacious"},
+        {"id": 1, "name": "Ganga Room", "category": "Classic"},
+        {"id": 2, "name": "Godavari Room", "category": "Premium"},
+        {"id": 3, "name": "Brahmaputra Room", "category": "Sun-facing"},
+        {"id": 4, "name": "Yamuna Room", "category": "Quiet/Cool"},
+        {"id": 5, "name": "Kaveri Room", "category": "Traditional"},
+        {"id": 6, "name": "Narmada Room", "category": "Airy"},
+        {"id": 7, "name": "Saraswati Room", "category": "Spacious"},
     ])
 
 @app.route('/api/rooms', methods=['GET'])
