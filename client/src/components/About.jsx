@@ -22,16 +22,17 @@ const About = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="section-title text-cream">Traditional Kaavi Sanctuary</h2>
+          <h2 className="section-title text-cream">Your Serene Mountain Retreat</h2>
           <div className="max-w-3xl mx-auto text-sm md:text-base text-cream/90 leading-relaxed font-medium space-y-4">
             <p>
-              Bhairavi Home Stay is an authentically crafted traditional sanctuary featuring the classic 
-              <strong> Kaavi (red oxide)</strong> finishes and <strong>Pulli Kolam</strong> patterns 
-              that define Tamil heritage.
+              Bhairavi Home Stay is a peaceful sanctuary located just a <strong>10-minute walk</strong> from the 
+              <strong> Isha Yoga Center</strong>, Coimbatore. Surrounded by lush greenery and the majestic 
+              Velliangiri mountains, our homestay offers the perfect environment for your stay.
             </p>
             <p>
-              Every corner of our homestay breathes the culture of South India, offering a grounded and spiritual 
-              base for your visit to the Isha Yoga Center and the Velliangiri foothills.
+              Ideal for those visiting for sadhana or seeking a quiet retreat, every corner of our homestay breathes 
+              tranquility. We provide a grounded and spiritual base featuring classic heritage finishes and a dedicated 
+              space for meditation.
             </p>
           </div>
         </div>

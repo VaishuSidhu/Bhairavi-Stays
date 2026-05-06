@@ -78,3 +78,62 @@ body {
   @apply bg-gold/50 rounded-full hover:bg-gold;
   border: 2px solid theme('colors.kaavi');
 }
+
+/* ── Amenity icon with hover tooltip ── */
+.amenity-icon-wrapper {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.amenity-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  border: 1.5px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.04);
+  color: rgba(250, 249, 246, 0.55);
+  cursor: default;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.amenity-icon-btn--active {
+  background: rgba(201, 161, 76, 0.15);
+  border-color: rgba(201, 161, 76, 0.5);
+  color: #C9A14C;
+  transform: translateY(-3px);
+}
+
+.amenity-tooltip {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1a0e0a;
+  color: #FAF9F6;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(201, 161, 76, 0.3);
+  pointer-events: none;
+  z-index: 50;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.amenity-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: rgba(201, 161, 76, 0.3);
+}

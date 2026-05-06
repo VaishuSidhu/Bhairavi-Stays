@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <div 
           className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 scale-105"
-          style={{ backgroundImage: "url('/hero-bg.png')" }}
+          style={{ backgroundImage: "url('https://sadhaka-stays.rajudasi.com/wp-content/uploads/2024/02/hero-bg.jpg')" }}
         />
         <div className="absolute inset-0 bg-black/50" />
       </div>
@@ -19,8 +19,8 @@ const Hero = () => {
             Bhairavi <span className="text-gold">Home Stay</span>
           </h1>
           <p className="max-w-2xl mx-auto text-base md:text-lg font-bold text-gold leading-relaxed drop-shadow-2xl opacity-90">
-            Experience Traditional Tamil Heritage. 
-            A Peaceful Spiritual Retreat near the Adiyogi Entrance.
+            Your serene mountain retreat near Isha Yoga Center, Coimbatore. 
+            A safe 10-minute walk to the ashram.
           </p>
         </div>
 

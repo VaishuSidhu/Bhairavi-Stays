@@ -42,7 +42,7 @@ const Contact = () => {
               {[
                 { icon: Phone, title: 'Phone Enquiry', value: '+91 94882 77211', desc: 'Call us daily 6 AM to 10 PM' },
                 { icon: MessageSquare, title: 'WhatsApp Chat', value: '+91 94882 77211', desc: 'Instant support for bookings' },
-                { icon: MapPin, title: 'Homestay Address', value: 'Adiyogi Main Entrance Road', desc: 'Near Isha Yoga Center, Coimbatore' }
+                { icon: MapPin, title: 'Homestay Address', value: '11, Gandhiji Street, Muttathuvayal', desc: '641114, Near Isha Yoga Center' }
               ].map((item, i) => (
                 <div key={i} className="flex p-8 items-start space-x-6 heritage-card kolam-border bg-dark-kaavi/20 transition-all hover:bg-dark-kaavi/40 hover:scale-105 active:scale-95 cursor-pointer">
                   <div className="w-16 h-16 rounded-full bg-gold/10 flex items-center justify-center text-gold border border-gold/20 flex-shrink-0">

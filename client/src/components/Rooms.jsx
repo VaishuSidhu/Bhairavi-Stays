@@ -38,6 +38,13 @@ const Rooms = () => {
               {/* Minimal Text Section */}
               <div className="p-6 flex flex-col items-center text-center space-y-3">
                 <h3 className="font-serif text-xl font-bold text-gold tracking-tight">{room.name}</h3>
+                {(room.size || room.capacity) && (
+                  <div className="flex space-x-4 text-[10px] text-cream/80 font-bold tracking-widest uppercase mb-1">
+                    {room.size && <span>{room.size}</span>}
+                    {room.size && room.capacity && <span>|</span>}
+                    {room.capacity && <span>{room.capacity}</span>}
+                  </div>
+                )}
                 <p className="text-cream/70 text-[11px] italic leading-relaxed line-clamp-2">
                   {room.shortDesc}
                 </p>

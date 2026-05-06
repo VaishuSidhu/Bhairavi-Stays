@@ -1,6 +1,21 @@
 {
-  "routes": [
-    { "src": "/api/(.*)", "dest": "/api/$1" },
-    { "src": "/(.*)", "dest": "/client/dist/$1" }
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    },
+    {
+      "source": "/(assets/.*)",
+      "destination": "/client/dist/$1"
+    },
+    {
+      "source": "/(.*\\.(png|jpg|jpeg|gif|svg|webp|ico|json|js|css))$",
+      "destination": "/client/dist/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/client/dist/index.html"
+    }
   ]
 }

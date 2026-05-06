@@ -47,7 +47,7 @@ const Footer = () => {
             <ul className="space-y-4 text-cream/70 text-xs font-bold uppercase tracking-widest">
               <li className="flex items-start space-x-3 italic">
                 <MapPin className="w-5 h-5 text-gold flex-shrink-0" />
-                <span>Adiyogi Entrance Road, Near Isha Yoga Center, Coimbatore</span>
+                <span>11, Gandhiji Street, Muttathuvayal, 641114, Coimbatore</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-gold flex-shrink-0" />
@@ -55,14 +55,14 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3">
                 <MessageSquare className="w-5 h-5 text-gold flex-shrink-0" />
-                <span className="font-black">+91 94882 77211</span>
+                <span className="font-black">contact@sadhakastays.com</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="text-center text-cream/40 text-xs font-black uppercase tracking-[0.2em] flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <p>© 2024 Bhairavi Home Stay. All Rights Reserved.</p>
+          <p>© 2026 Bhairavi Home Stay. All Rights Reserved.</p>
           <div className="flex items-center space-x-2">
             <span>Made with</span>
             <Heart className="w-4 h-4 text-gold fill-gold" />

@@ -24,8 +24,7 @@ const Location = () => {
         <div className="text-center mb-16">
           <h2 className="section-title text-cream">Temple & Foothills</h2>
           <p className="max-w-3xl mx-auto text-cream/80 text-lg md:text-xl font-medium tracking-wide">
-            Just 500 meters from the Adiyogi entrance, we are perfectly positioned 
-            for your Isha Yoga Center visit and Velliangiri trek.
+            Located just <strong>11, Gandhiji Street, Muttathuvayal</strong>. We are a safe <strong>10-minute walk</strong> to the Isha Yoga Center ashram.
           </p>
         </div>
 
@@ -60,7 +59,7 @@ const Location = () => {
             <div className="h-[450px] w-full rounded-3xl overflow-hidden shadow-2xl border-2 border-cream/20 relative group scale-95 hover:scale-100 transition-all duration-700">
               <div className="absolute inset-0 bg-gold/5 group-hover:bg-transparent transition-all" />
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.480072047395!2d76.68069507481944!3d10.970222089189352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8427f717cc397%3A0xe54d6af80104870f!2sAdiyogi%20Isha%20Yoga%20Center!5e0!3m2!1sen!2sin!4v1711123456789!5m2!1sen!2sin" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.480072047395!2d76.7211!3d10.9833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8427f717cc397%3A0xe54d6af80104870f!2sBhairavi%20Homestay!5e0!3m2!1sen!2sin!4v1711123456789!5m2!1sen!2sin" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 

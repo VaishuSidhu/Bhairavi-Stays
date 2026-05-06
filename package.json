@@ -4,6 +4,7 @@
   "description": "Serverless API for Bhairavi Homestay",
   "main": "api/rooms.js",
   "scripts": {
+    "build": "cd client && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
