@@ -6,12 +6,12 @@
       "destination": "/api/$1"
     },
     {
-      "source": "/(assets/.*)",
-      "destination": "/client/dist/$1"
+      "source": "/assets/:path*",
+      "destination": "/client/dist/assets/:path*"
     },
     {
-      "source": "/(.*\\.(png|jpg|jpeg|gif|svg|webp|ico|json|js|css))$",
-      "destination": "/client/dist/$1"
+      "source": "/:path(.+\\.(?:png|jpg|jpeg|gif|svg|webp|ico|json|js|css))",
+      "destination": "/client/dist/:path"
     },
     {
       "source": "/(.*)",
