@@ -50,35 +50,48 @@ const ContactPage = () => {
             <div className="heritage-card p-8 space-y-6">
               <h3 className="font-serif text-2xl font-bold text-gold border-b border-gold/20 pb-4 uppercase tracking-wider">Reach Us</h3>
               
-              <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center text-gold shrink-0">
+              <a 
+                href="https://wa.me/919488277211?text=Namaskaram!%20I'm%20interested%20in%20booking%20a%20stay%20at%20Bhairavi%20Homestay." 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-start space-x-4 hover:bg-gold/5 p-2 rounded-xl transition-all group"
+              >
+                <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center text-gold shrink-0 group-hover:bg-gold group-hover:text-kaavi transition-all">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-[10px] uppercase font-black tracking-widest text-cream/40 mb-1">Phone</p>
-                  <p className="text-cream font-bold">+91 94882 77211</p>
+                  <p className="text-[10px] uppercase font-black tracking-widest text-cream/40 mb-1">Phone / WhatsApp</p>
+                  <p className="text-cream font-bold group-hover:text-gold transition-colors">+91 94882 77211</p>
                 </div>
-              </div>
+              </a>
 
-              <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center text-gold shrink-0">
+              <a 
+                href="mailto:bhairavihomestay@gmail.com" 
+                className="flex items-start space-x-4 hover:bg-gold/5 p-2 rounded-xl transition-all group"
+              >
+                <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center text-gold shrink-0 group-hover:bg-gold group-hover:text-kaavi transition-all">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
                   <p className="text-[10px] uppercase font-black tracking-widest text-cream/40 mb-1">Email</p>
-                  <p className="text-cream font-bold">bhairavihomestay@gmail.com</p>
+                  <p className="text-cream font-bold group-hover:text-gold transition-colors">bhairavihomestay@gmail.com</p>
                 </div>
-              </div>
+              </a>
 
-              <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center text-gold shrink-0">
+              <a 
+                href="https://maps.app.goo.gl/r6f1hS2YQ6wL4M8J7" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-start space-x-4 hover:bg-gold/5 p-2 rounded-xl transition-all group"
+              >
+                <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center text-gold shrink-0 group-hover:bg-gold group-hover:text-kaavi transition-all">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
                   <p className="text-[10px] uppercase font-black tracking-widest text-cream/40 mb-1">Address</p>
-                  <p className="text-cream font-bold text-sm">11, Gandhiji Street, Muttathuvayal, Coimbatore - 641114</p>
+                  <p className="text-cream font-bold text-sm group-hover:text-gold transition-colors">11, Gandhiji Street, Muttathuvayal, Coimbatore - 641114</p>
                 </div>
-              </div>
+              </a>
             </div>
 
             <div className="heritage-card p-8 bg-darkkaavi/40">

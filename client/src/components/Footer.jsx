@@ -25,9 +25,9 @@ const Footer = () => {
               Tamil heritage in <strong>Classic Kaavi</strong> surroundings.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="p-3 bg-cream/10 rounded-full hover:bg-gold hover:text-kaavi transition-all"><MapPin className="w-5 h-5" /></a>
-              <a href="#" className="p-3 bg-cream/10 rounded-full hover:bg-gold hover:text-kaavi transition-all"><Phone className="w-5 h-5" /></a>
-              <a href="#" className="p-3 bg-cream/10 rounded-full hover:bg-gold hover:text-kaavi transition-all"><MessageSquare className="w-5 h-5" /></a>
+              <a href="https://maps.app.goo.gl/r6f1hS2YQ6wL4M8J7" target="_blank" rel="noopener noreferrer" className="p-3 bg-cream/10 rounded-full hover:bg-gold hover:text-kaavi transition-all"><MapPin className="w-5 h-5" /></a>
+              <a href="https://wa.me/919488277211" target="_blank" rel="noopener noreferrer" className="p-3 bg-cream/10 rounded-full hover:bg-gold hover:text-kaavi transition-all"><Phone className="w-5 h-5" /></a>
+              <a href="https://wa.me/919488277211?text=Hi!%20I%20have%20an%20enquiry%20about%20Bhairavi%20Homestay." target="_blank" rel="noopener noreferrer" className="p-3 bg-cream/10 rounded-full hover:bg-gold hover:text-kaavi transition-all"><MessageSquare className="w-5 h-5" /></a>
             </div>
           </div>
 
@@ -49,13 +49,25 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 text-gold flex-shrink-0" />
                 <span>11, Gandhiji Street, Muttathuvayal, 641114, Coimbatore</span>
               </li>
-              <li className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-gold flex-shrink-0" />
-                <span className="font-black">+91 94882 77211</span>
+              <li>
+                <a 
+                  href="https://wa.me/919488277211?text=Namaskaram!%20I'm%20interested%20in%20booking%20a%20stay%20at%20Bhairavi%20Homestay.%20What%20is%20the%20availability?" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-3 hover:text-gold transition-all"
+                >
+                  <Phone className="w-5 h-5 text-gold flex-shrink-0" />
+                  <span className="font-black">+91 94882 77211</span>
+                </a>
               </li>
-              <li className="flex items-center space-x-3">
-                <MessageSquare className="w-5 h-5 text-gold flex-shrink-0" />
-                <span className="font-black">contact@sadhakastays.com</span>
+              <li>
+                <a 
+                  href="mailto:bhairavihomestay@gmail.com" 
+                  className="flex items-center space-x-3 hover:text-gold transition-all"
+                >
+                  <MessageSquare className="w-5 h-5 text-gold flex-shrink-0" />
+                  <span className="font-black">bhairavihomestay@gmail.com</span>
+                </a>
               </li>
             </ul>
           </div>
