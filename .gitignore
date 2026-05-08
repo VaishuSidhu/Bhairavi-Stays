@@ -4,3 +4,5 @@ dist/
 .DS_Store
 backend/__pycache__/
 backend/.env
+# Allow .env.production (contains only public Render URL, no secrets)
+!client/.env.production

@@ -8,17 +8,19 @@ from datetime import datetime
 load_dotenv()
 
 app = Flask(__name__)
-# Allow CORS for the frontend origin
-CORS(app, resources={r"/api/*": {"origins": ["http://localhost:5173", "http://127.0.0.1:5173"]}})
+
+# Allow CORS for frontend (local dev + Netlify production)
+ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173").split(",")
+CORS(app, resources={r"/api/*": {"origins": ALLOWED_ORIGINS}})
 
 # MongoDB Configuration
 MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017/bhairavi_homestay")
 
 try:
-    client = MongoClient(MONGO_URI, serverSelectionTimeoutMS=2000)
+    client = MongoClient(MONGO_URI, serverSelectionTimeoutMS=5000)
     # Trigger a connectivity check
     client.server_info()
-    db = client.get_default_database() or client["bhairavi_homestay"]
+    db = client.get_default_database() if client.get_default_database() else client["bhairavi_homestay"]
     rooms_collection = db["rooms"]
     bookings_collection = db["bookings"]
     print("Successfully connected to MongoDB.")
@@ -70,7 +72,7 @@ def book_room():
             return jsonify({"error": "No booking data provided"}), 400
         
         # Add timestamp and status
-        data['created_at'] = datetime.utcnow()
+        data['created_at'] = datetime.utcnow().isoformat()
         data['status'] = 'pending'
         
         # Basic validation
@@ -78,8 +80,6 @@ def book_room():
              return jsonify({"error": "Name and Phone are required"}), 400
 
         result = bookings_collection.insert_one(data)
-        
-        # Note: If this was a real app, we might trigger a WhatsApp/Email notification here
         print(f"Booking registered: ID={result.inserted_id}")
 
         return jsonify({"message": "Booking request received successfully", "id": str(result.inserted_id)}), 201
@@ -91,4 +91,5 @@ def health_check():
     return jsonify({"status": "healthy"}), 200
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    port = int(os.getenv("PORT", 5000))
+    app.run(debug=False, host='0.0.0.0', port=port)
