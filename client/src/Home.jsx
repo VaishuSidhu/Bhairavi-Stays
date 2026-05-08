@@ -16,8 +16,8 @@ const Home = () => {
       <Rooms />
       <Facilities />
       <div className="kolam-divider mx-auto w-1/2 opacity-30 shadow-sm" />
-      <Location />
       <FAQ />
+      <Location />
       <Contact />
     </main>
   );

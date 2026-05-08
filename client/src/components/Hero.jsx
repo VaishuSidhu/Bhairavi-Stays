@@ -1,16 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 
 const Hero = () => {
+  const images = [
+    '/hero-custom.png',
+    'https://sadhaka-stays.rajudasi.com/wp-content/uploads/2026/02/Gemini_Generated_Image_jclt4bjclt4bjclt.png',
+    'https://sadhaka-stays.rajudasi.com/wp-content/uploads/2026/03/Kaveri-1.webp',
+    'https://sadhaka-stays.rajudasi.com/wp-content/uploads/2026/03/Narmada-1.webp',
+    'https://sadhaka-stays.rajudasi.com/wp-content/uploads/2026/03/Saraswati-2.webp'
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with overlay */}
+      {/* Background Slider */}
       <div className="absolute inset-0 z-0">
-        <div 
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 scale-105"
-          style={{ backgroundImage: "url('https://sadhaka-stays.rajudasi.com/wp-content/uploads/2024/02/hero-bg.jpg')" }}
-        />
-        <div className="absolute inset-0 bg-black/50" />
+        {images.map((image, index) => (
+          <div 
+            key={index}
+            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-2000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'}`}
+            style={{ backgroundImage: `url('${image}')` }}
+          />
+        ))}
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-cream space-y-8">
@@ -29,9 +50,9 @@ const Hero = () => {
             View Rooms
             <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
-          <a href="#contact" className="btn-secondary text-white border-white hover:bg-white/20 transition-all font-bold backdrop-blur-sm">
+          <Link to="/contact" className="btn-secondary text-white border-white hover:bg-white/20 transition-all font-bold backdrop-blur-sm">
             Contact / Book Now
-          </a>
+          </Link>
         </div>
 
         {/* Floating Diya Ornaments (SVGs) */}

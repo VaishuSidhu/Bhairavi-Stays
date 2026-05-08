@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './Home';
 import RoomDetails from './components/RoomDetails';
+import ContactPage from './pages/ContactPage';
+import CalendarPage from './pages/CalendarPage';
 import Footer from './components/Footer';
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/room/:id" element={<RoomDetails />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/calendar" element={<CalendarPage />} />
         </Routes>
 
         <Footer />

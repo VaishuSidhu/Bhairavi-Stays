@@ -137,3 +137,13 @@ body {
   border: 5px solid transparent;
   border-top-color: rgba(201, 161, 76, 0.3);
 }
+
+.form-input-custom {
+  @apply w-full bg-darkkaavi text-cream border-2 border-cream/10 rounded-xl px-5 py-4 focus:outline-none focus:border-gold transition-all text-sm font-bold placeholder:text-cream/20;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.8) sepia(100%) saturate(1000%) hue-rotate(320deg) brightness(100%);
+  cursor: pointer;
+}
