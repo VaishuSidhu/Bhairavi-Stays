@@ -18,6 +18,7 @@ const ContactPage = () => {
     emergencyName: '',
     emergencyPhone: '',
     roomType: 'Kaveri',
+    nationality: '',
     message: ''
   });
 
@@ -163,6 +164,13 @@ const ContactPage = () => {
                     <div className="space-y-2">
                       <label className="text-[10px] uppercase font-black tracking-widest text-cream/60">Phone Number</label>
                       <input type="tel" required placeholder="WhatsApp Number" className="form-input-custom" onChange={(e) => setFormData({...formData, phone: e.target.value})} />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2 md:col-span-2">
+                      <label className="text-[10px] uppercase font-black tracking-widest text-cream/60">Nationality *</label>
+                      <input type="text" required placeholder="Your Nationality" className="form-input-custom" onChange={(e) => setFormData({...formData, nationality: e.target.value})} />
                     </div>
                   </div>
 

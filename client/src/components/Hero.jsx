@@ -1,43 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 
 const Hero = () => {
-  const images = [
-    '/hero-3.png',
-    '/hero-1.webp',
-    '/hero-2.webp',
-    '/hero-custom.png'
-  ];
-
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 6000);
-    return () => clearInterval(interval);
-  }, [images.length]);
-
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-darkkaavi">
-      {/* Background Slider */}
-      <div className="absolute inset-0 z-0">
-        {images.map((image, index) => (
-          <div 
-            key={index}
-            className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-[2000ms] ease-in-out ${
-              index === currentImageIndex ? 'opacity-100 scale-105' : 'opacity-0 scale-100'
-            }`}
-            style={{ 
-              backgroundImage: `url('${image}')`,
-              zIndex: index === currentImageIndex ? 1 : 0
-            }}
-          />
-        ))}
-        {/* Deep Overlay for readability */}
-        <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/60 via-black/30 to-black/60" />
-      </div>
+      {/* Fixed Background */}
+      <div 
+        className="absolute inset-0 z-0 bg-fixed bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url('/hero-3.png')` }}
+      />
+      {/* Deep Overlay for readability */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/60 via-black/30 to-black/60" />
 
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-10">
         <div className="space-y-6">
