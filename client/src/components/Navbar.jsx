@@ -94,7 +94,7 @@ const Navbar = () => {
               <span>{link.name}</span>
             </NavHashLink>
           ))}
-          <div className="pt-6 pb-4 px-3">
+          <div className="pt-6 pb-4 px-3 space-y-4">
             <Link 
               to="/contact" 
               onClick={() => setIsOpen(false)}
@@ -102,6 +102,15 @@ const Navbar = () => {
             >
               Book Your Stay
             </Link>
+            <a 
+              href="https://wa.me/919488277211?text=Namaskaram!%20I'd%20like%20to%20enquire%20about%20a%20stay." 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center space-x-3 w-full text-center bg-white/10 text-gold px-6 py-4 rounded-xl font-black uppercase tracking-widest border border-gold/30"
+            >
+              <Phone className="w-5 h-5" />
+              <span>Call / WhatsApp</span>
+            </a>
           </div>
         </div>
       </div>

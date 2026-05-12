@@ -137,44 +137,116 @@ const RoomDetails = () => {
             {/* Check Availability */}
             <div className="pt-8 space-y-6">
               <div className="bg-kaavi/20 p-8 rounded-3xl border border-white/5 shadow-3xl">
-                <h3 className="font-serif text-2xl text-gold mb-2 uppercase tracking-widest font-black border-b border-gold/10 pb-4">Check Availability</h3>
-                <p className="text-cream/50 text-xs uppercase tracking-widest mb-6">Select a check-in and check-out date</p>
-                <form className="space-y-5">
+                <h3 className="font-serif text-2xl text-gold mb-2 uppercase tracking-widest font-black border-b border-gold/10 pb-4">Booking Enquiry Form</h3>
+                <form className="space-y-5 mt-6">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-[10px] uppercase font-black tracking-widest text-cream/70 mb-2">Check In</label>
-                      <input
-                        type="date"
-                        className="w-full bg-darkkaavi/50 border border-white/10 rounded-xl p-4 text-cream focus:border-gold outline-none transition-colors"
-                      />
+                      <label className="block text-[10px] uppercase font-black tracking-widest text-cream/70 mb-2">First Name *</label>
+                      <input type="text" required className="w-full bg-darkkaavi/50 border border-white/10 rounded-xl p-4 text-cream focus:border-gold outline-none transition-colors" />
                     </div>
                     <div>
-                      <label className="block text-[10px] uppercase font-black tracking-widest text-cream/70 mb-2">Check Out</label>
-                      <input
-                        type="date"
-                        className="w-full bg-darkkaavi/50 border border-white/10 rounded-xl p-4 text-cream focus:border-gold outline-none transition-colors"
-                      />
+                      <label className="block text-[10px] uppercase font-black tracking-widest text-cream/70 mb-2">Last Name *</label>
+                      <input type="text" required className="w-full bg-darkkaavi/50 border border-white/10 rounded-xl p-4 text-cream focus:border-gold outline-none transition-colors" />
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-4">
+                  
+                  <div>
+                    <label className="block text-[10px] uppercase font-black tracking-widest text-cream/70 mb-2">WhatsApp Contact Number *</label>
+                    <p className="text-[9px] text-cream/50 mb-2">Please include your country code</p>
+                    <input type="tel" required className="w-full bg-darkkaavi/50 border border-white/10 rounded-xl p-4 text-cream focus:border-gold outline-none transition-colors" />
+                  </div>
+
+                  <div>
+                    <label className="block text-[10px] uppercase font-black tracking-widest text-cream/70 mb-2">Email ID *</label>
+                    <input type="email" required className="w-full bg-darkkaavi/50 border border-white/10 rounded-xl p-4 text-cream focus:border-gold outline-none transition-colors" />
+                  </div>
+
+                  <div>
+                    <label className="block text-[10px] uppercase font-black tracking-widest text-cream/70 mb-2">Nationality *</label>
+                    <input type="text" required className="w-full bg-darkkaavi/50 border border-white/10 rounded-xl p-4 text-cream focus:border-gold outline-none transition-colors" />
+                  </div>
+
+                  <div>
+                    <label className="block text-[10px] uppercase font-black tracking-widest text-cream/70 mb-2">Room *</label>
+                    <select defaultValue={room.name} required className="w-full bg-darkkaavi/50 border border-white/10 rounded-xl p-4 text-cream focus:border-gold outline-none transition-colors appearance-none">
+                      <option value="" disabled>—Please choose an option—</option>
+                      {roomsData.map(r => (
+                        <option key={r.id} value={r.name}>{r.name}</option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-[10px] uppercase font-black tracking-widest text-cream/70 mb-2">Adults</label>
-                      <select className="w-full bg-darkkaavi/50 border border-white/10 rounded-xl p-4 text-cream focus:border-gold outline-none transition-colors appearance-none">
-                        {[1, 2, 3, 4].map(n => <option key={n} value={n}>{n} Adult{n > 1 ? 's' : ''}</option>)}
+                      <label className="block text-[10px] uppercase font-black tracking-widest text-cream/70 mb-2">Check-in Date *</label>
+                      <input type="date" required className="w-full bg-darkkaavi/50 border border-white/10 rounded-xl p-4 text-cream focus:border-gold outline-none transition-colors" />
+                    </div>
+                    <div>
+                      <label className="block text-[10px] uppercase font-black tracking-widest text-cream/70 mb-2">Check-in Time *</label>
+                      <select required className="w-full bg-darkkaavi/50 border border-white/10 rounded-xl p-4 text-cream focus:border-gold outline-none transition-colors appearance-none">
+                        {[...Array(24)].map((_, i) => {
+                          const hour = i === 0 ? 12 : (i > 12 ? i - 12 : i);
+                          const ampm = i < 12 ? 'AM' : 'PM';
+                          return <option key={i} value={`${hour}:00 ${ampm}`}>{`${hour}:00 ${ampm}`}</option>
+                        })}
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-[10px] uppercase font-black tracking-widest text-cream/70 mb-2">Check-out Date *</label>
+                      <input type="date" required className="w-full bg-darkkaavi/50 border border-white/10 rounded-xl p-4 text-cream focus:border-gold outline-none transition-colors" />
+                    </div>
+                    <div>
+                      <label className="block text-[10px] uppercase font-black tracking-widest text-cream/70 mb-2">Check-out Time *</label>
+                      <select required className="w-full bg-darkkaavi/50 border border-white/10 rounded-xl p-4 text-cream focus:border-gold outline-none transition-colors appearance-none">
+                        {[...Array(24)].map((_, i) => {
+                          const hour = i === 0 ? 12 : (i > 12 ? i - 12 : i);
+                          const ampm = i < 12 ? 'AM' : 'PM';
+                          return <option key={i} value={`${hour}:00 ${ampm}`}>{`${hour}:00 ${ampm}`}</option>
+                        })}
+                      </select>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-[10px] uppercase font-black tracking-widest text-cream/70 mb-2">Other Guests</label>
+                    <p className="text-[9px] text-cream/50 mb-2">Enter full name and nationality of all additional guests, separated by commas</p>
+                    <textarea rows="2" className="w-full bg-darkkaavi/50 border border-white/10 rounded-xl p-4 text-cream focus:border-gold outline-none transition-colors resize-none"></textarea>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                      <label className="block text-[10px] uppercase font-black tracking-widest text-cream/70 mb-2">Adults (Age 13+) *</label>
+                      <select required className="w-full bg-darkkaavi/50 border border-white/10 rounded-xl p-4 text-cream focus:border-gold outline-none transition-colors appearance-none">
+                        {[1, 2, 3, 4].map(n => <option key={n} value={n}>{n}</option>)}
                       </select>
                     </div>
                     <div>
-                      <label className="block text-[10px] uppercase font-black tracking-widest text-cream/70 mb-2">Kids</label>
+                      <label className="block text-[10px] uppercase font-black tracking-widest text-cream/70 mb-2">Children (Ages 2-12)</label>
                       <select className="w-full bg-darkkaavi/50 border border-white/10 rounded-xl p-4 text-cream focus:border-gold outline-none transition-colors appearance-none">
-                        {[0, 1, 2, 3].map(n => <option key={n} value={n}>{n} Kid{n !== 1 ? 's' : ''}</option>)}
+                        {[0, 1, 2, 3].map(n => <option key={n} value={n}>{n}</option>)}
+                      </select>
+                    </div>
+                    <div>
+                      <label className="block text-[10px] uppercase font-black tracking-widest text-cream/70 mb-2">Infants (Under 2)</label>
+                      <select className="w-full bg-darkkaavi/50 border border-white/10 rounded-xl p-4 text-cream focus:border-gold outline-none transition-colors appearance-none">
+                        {[0, 1, 2, 3].map(n => <option key={n} value={n}>{n}</option>)}
                       </select>
                     </div>
                   </div>
+
+                  <div>
+                    <label className="block text-[10px] uppercase font-black tracking-widest text-cream/70 mb-2">Medical Conditions or Special Assistance Required</label>
+                    <textarea rows="3" className="w-full bg-darkkaavi/50 border border-white/10 rounded-xl p-4 text-cream focus:border-gold outline-none transition-colors resize-none"></textarea>
+                  </div>
+
                   <button
                     type="button"
-                    className="btn-primary w-full text-center py-5 text-xl uppercase tracking-[0.2em] shadow-xl flex items-center justify-center space-x-3 transform hover:-translate-y-1 mt-4"
+                    className="btn-primary w-full text-center py-5 text-lg uppercase tracking-[0.2em] shadow-xl flex items-center justify-center space-x-3 transform hover:-translate-y-1 mt-4"
                   >
-                    <span>Check Availability</span>
+                    <span>Send Booking Request</span>
                     <ArrowLeft className="w-5 h-5 rotate-180" />
                   </button>
                 </form>

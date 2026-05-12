@@ -35,11 +35,11 @@ export const roomsData = [
     ],
     features: ['King Size Bed', 'Mountain View', 'First Floor', 'Hot Shower', '24/7 Power Backup', 'Organic Linen'], 
     services: ['Common Kitchen Access', 'Sadhana Space', 'Daily Room Refresh', 'Yoga Mat on Request', 'Filtered Drinking Water'],
-    mainImage: 'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_ganga_1.webp',
+    mainImage: '/rooms/ganga_1.webp',
     gallery: [
-      'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_ganga_1.webp',
-      'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_ganga_2.webp',
-      'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_ganga_3.webp'
+      '/rooms/ganga_1.webp',
+      '/rooms/ganga_2.webp',
+      '/rooms/ganga_3.webp'
     ],
     tag: 'Peaceful'
   },
@@ -79,12 +79,12 @@ export const roomsData = [
     ],
     features: ['Double Bed', 'Mountain View', 'Second Floor', 'Hot Shower', 'Wifi'], 
     services: ['Common Kitchen Access', 'Sadhana Space', 'Daily Refresh'],
-    mainImage: 'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_narmada_1.webp',
+    mainImage: '/rooms/narmada_1.webp',
     gallery: [
-      'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_narmada_1.webp',
-      'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_narmada_2.webp',
-      'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_narmada_3.webp',
-      'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_narmada_4.webp'
+      '/rooms/narmada_1.webp',
+      '/rooms/narmada_2.webp',
+      '/rooms/narmada_3.webp',
+      '/rooms/narmada_4.webp'
     ],
     tag: 'Cozy'
   },
@@ -124,11 +124,11 @@ export const roomsData = [
     ],
     features: ['Spacious Layout', 'First Floor', 'Queen Bed', 'Wifi'], 
     services: ['Common Kitchen Access', 'Daily Housekeeping', 'Filtered Water'],
-    mainImage: 'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_yamuna_1.webp',
+    mainImage: '/rooms/yamuna_1.webp',
     gallery: [
-      'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_yamuna_1.webp',
-      'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_yamuna_2.webp',
-      'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_yamuna_3.webp'
+      '/rooms/yamuna_1.webp',
+      '/rooms/yamuna_2.webp',
+      '/rooms/yamuna_3.webp'
     ],
     tag: 'Spacious'
   },
@@ -168,11 +168,11 @@ export const roomsData = [
     ],
     features: ['Comfortable Bedding', 'Second Floor', 'Mountain View', 'Wifi'], 
     services: ['Common Kitchen Access', 'Yoga Space', 'Daily Refresh'],
-    mainImage: 'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_godavari_1.webp',
+    mainImage: '/rooms/godavari_1.webp',
     gallery: [
-      'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_godavari_1.webp',
-      'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_godavari_2.webp',
-      'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_godavari_3.webp'
+      '/rooms/godavari_1.webp',
+      '/rooms/godavari_2.webp',
+      '/rooms/godavari_3.webp'
     ],
     tag: 'Quiet'
   },
@@ -212,11 +212,11 @@ export const roomsData = [
     ],
     features: ['Large Room', 'First Floor', 'Hot Water', 'Wifi'], 
     services: ['Common Kitchen Access', 'Meditation Area', 'Daily Refresh'],
-    mainImage: 'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_saraswati_1.webp',
+    mainImage: '/rooms/saraswati_1.webp',
     gallery: [
-      'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_saraswati_1.webp',
-      'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_saraswati_2.webp',
-      'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_saraswati_3.webp'
+      '/rooms/saraswati_1.webp',
+      '/rooms/saraswati_2.webp',
+      '/rooms/saraswati_3.webp'
     ],
     tag: 'Serene'
   },
@@ -256,12 +256,12 @@ export const roomsData = [
     ],
     features: ['Sunrise View', 'Second Floor', 'Hot Water', 'Wifi'], 
     services: ['Common Kitchen Access', 'Yoga Friendly', 'Daily Refresh'],
-    mainImage: 'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_cvm-house-767cb4.webp',
+    mainImage: '/rooms/brahmaputra_1.webp',
     gallery: [
-      'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_cvm-house-767cb4.webp',
-      'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_cvm-house-106c4a.webp',
-      'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_cvm-house-f02708.webp',
-      'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_cvm-house-ace57b.webp'
+      '/rooms/brahmaputra_1.webp',
+      '/rooms/brahmaputra_2.webp',
+      '/rooms/brahmaputra_3.webp',
+      '/rooms/brahmaputra_4.webp'
     ],
     tag: 'Sunrise'
   },
@@ -301,13 +301,13 @@ export const roomsData = [
     ],
     features: ['Private Kitchen', 'Large Capacity', 'Second Floor', 'Family Friendly'], 
     services: ['Filtered Water', 'Laundry Service', 'Daily Refresh'],
-    mainImage: 'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_kaveri_1.webp',
+    mainImage: '/rooms/kaveri_1.webp',
     gallery: [
-      'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_kaveri_1.webp',
-      'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_kaveri_2.webp',
-      'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_kaveri_3.jpg',
-      'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_kaveri_4.webp',
-      'https://sadhaka-stays.rajudasi.com/wp-content/plugins/vikbooking/site/resources/uploads/big_kaveri_5.webp'
+      '/rooms/kaveri_1.webp',
+      '/rooms/kaveri_2.webp',
+      '/rooms/kaveri_3.jpg',
+      '/rooms/kaveri_4.webp',
+      '/rooms/kaveri_5.webp'
     ],
     tag: 'Premium'
   }

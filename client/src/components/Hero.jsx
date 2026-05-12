@@ -1,66 +1,54 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 
 const Hero = () => {
-  const images = [
-    '/hero-custom.png',
-    'https://sadhaka-stays.rajudasi.com/wp-content/uploads/2026/02/Gemini_Generated_Image_jclt4bjclt4bjclt.png',
-    'https://sadhaka-stays.rajudasi.com/wp-content/uploads/2026/03/Kaveri-1.webp',
-    'https://sadhaka-stays.rajudasi.com/wp-content/uploads/2026/03/Narmada-1.webp',
-    'https://sadhaka-stays.rajudasi.com/wp-content/uploads/2026/03/Saraswati-2.webp'
-  ];
-
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Slider */}
-      <div className="absolute inset-0 z-0">
-        {images.map((image, index) => (
-          <div 
-            key={index}
-            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-2000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'}`}
-            style={{ backgroundImage: `url('${image}')` }}
-          />
-        ))}
-        <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
-      </div>
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-darkkaavi">
+      {/* Fixed Background */}
+      <div 
+        className="absolute inset-0 z-0 bg-fixed bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url('/hero-3.png')` }}
+      />
+      {/* Deep Overlay for readability */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/60 via-black/30 to-black/60" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-cream space-y-8">
-        <div className="animate-fade-in-up">
-          <h1 className="font-serif text-3xl md:text-5xl font-black mb-6 text-cream drop-shadow-[0_10px_10px_rgba(0,0,0,0.6)] leading-tight uppercase tracking-tight">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-10">
+        <div className="space-y-6">
+          <div className="inline-block px-4 py-1 rounded-full border border-gold/30 bg-gold/10 backdrop-blur-md mb-4 animate-fade-in">
+            <span className="text-[10px] uppercase font-black tracking-[0.3em] text-gold">Sanctuary near Isha Yoga Center</span>
+          </div>
+          
+          <h1 className="font-serif text-4xl md:text-7xl font-black text-white leading-tight uppercase tracking-tight drop-shadow-2xl">
             Bhairavi <span className="text-gold">Home Stay</span>
           </h1>
-          <p className="max-w-2xl mx-auto text-base md:text-lg font-bold text-gold leading-relaxed drop-shadow-2xl opacity-90">
-            Your serene mountain retreat near Isha Yoga Center, Coimbatore. 
-            A safe 10-minute walk to the ashram.
+          
+          <p className="max-w-2xl mx-auto text-lg md:text-xl font-bold text-cream/90 leading-relaxed drop-shadow-lg italic">
+            "Your serene mountain retreat near Isha Yoga Center, Coimbatore. 
+            A safe 10-minute walk to the ashram."
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 animate-fade-in opacity-0" style={{ animationDelay: '0.5s' }}>
-          <a href="#rooms" className="group btn-primary flex items-center shadow-2xl">
-            View Rooms
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4">
+          <a 
+            href="#rooms" 
+            className="group btn-primary min-w-[200px] flex items-center justify-center shadow-[0_20px_50px_rgba(0,0,0,0.5)] transform hover:-translate-y-1 transition-all"
+          >
+            Explore Sanctuaries
             <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
-          <Link to="/contact" className="btn-secondary text-white border-white hover:bg-white/20 transition-all font-bold backdrop-blur-sm">
-            Contact / Book Now
+          <Link 
+            to="/contact" 
+            className="btn-secondary min-w-[200px] text-white border-white/50 hover:border-gold hover:text-gold transition-all font-black uppercase tracking-widest backdrop-blur-md"
+          >
+            Enquire Now
           </Link>
         </div>
 
-        {/* Floating Diya Ornaments (SVGs) */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-80">
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 35C28.2843 35 35 28.2843 35 20C35 11.7157 28.2843 5 20 5C11.7157 5 5 11.7157 5 20C5 28.2843 11.7157 35 20 35Z" stroke="#C89B3C" strokeWidth="2" />
-            <path d="M20 25C22.7614 25 25 22.7614 25 20C25 17.2386 22.7614 15 20 15C17.2386 15 15 17.2386 15 20C15 22.7614 17.2386 25 20 25Z" fill="#C89B3C" />
-          </svg>
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center space-y-4 opacity-60">
+          <span className="text-[9px] uppercase tracking-[0.5em] font-black text-cream">Scroll</span>
+          <div className="w-[1px] h-16 bg-gradient-to-b from-gold to-transparent" />
         </div>
       </div>
     </section>
